@@ -1,0 +1,38 @@
+{
+  "name": "webpack-typescript-starter",
+  "version": "1.0.0",
+  "description": "Webpack + Typescript Starter",
+  "author": {
+    "name": "Nikolay Nikolaev",
+    "email": "nikolay-nikolaev@outlook.com",
+    "url": "http://nnikolaev.net"
+  },
+  "scripts": {
+    "build": "webpack --display-error-details",
+    "watch": "webpack --watch",
+    "server": "lite-server",
+    "start": "webpack && lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/n-a-nikolaev/webpack-ts-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/n-a-nikolaev/webpack-ts-starter/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@types/jquery": "^2.0.34",
+    "@types/rx": "^2.5.34",
+    "@types/es6-shim": "^0.31.32",
+    "jquery": "^3.1.1",
+    "rxjs": "^5.0.1",
+    "semantic-ui": "^2.2.6"
+  },
+  "devDependencies": {
+    "lite-server": "^2.2.2",
+    "ts-loader": "^1.3.3",
+    "typescript": "^2.1.4",
+    "webpack": "^1.14.0"
+  }
+}
