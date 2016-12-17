@@ -1,9 +1,7 @@
 import { LoadingComponent } from './components/loader-component';
 import { SearchComponent } from './components/search-component';
-import { LoaderOptions } from './types/loader-options.interface';
-import { SearchOptions } from './types/search-options.interface';
-import { ListOptions } from './types/list-options.interface';
 import { ListUsersComponent } from './components/list-user.component';
+import { BaseComponentOptions } from './types/base-component-options.interface';
 
 // Get DOM Elements
 let $loader = document.getElementById('gtu-loader');
@@ -12,21 +10,20 @@ let $list = document.getElementById('gtu-list-users-component');
 
 
 // Initialize Loader
-let loaderOption: LoaderOptions = {
+let loaderOption: BaseComponentOptions = {
     element: $loader
 }
 let loader = new LoadingComponent(loaderOption);
 
 
 // Initialize search component
-let searchOptions: SearchOptions = {
-    element: $search,
-    loader: loader
+let searchOptions: BaseComponentOptions = {
+    element: $search
 }
 let search = new SearchComponent(searchOptions);
 
 // Initialize list users component
-let listOptions: ListOptions = {
+let listOptions: BaseComponentOptions = {
     element: $list
 }
 let list = new ListUsersComponent(listOptions);

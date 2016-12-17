@@ -1,18 +1,15 @@
 import * as Rx from 'rxjs';
 import { Observable } from 'rxjs/Observable';
 
-import { SearchOptions } from '../types/search-options.interface';
-import { LoadingComponent } from './loader-component';
+import { BaseComponentOptions } from '../types/base-component-options.interface';
 
 export class SearchComponent {
     private inputClass: string = 'search-input';
 
-    private Loader: LoadingComponent;
     private $search: Element;
     private $input: Element;
 
-    constructor(options: SearchOptions) {
-        this.Loader = options.loader;
+    constructor(options: BaseComponentOptions) {
         this.$search = options.element;
         this.$input = document.getElementsByClassName(this.inputClass)[0];
     }

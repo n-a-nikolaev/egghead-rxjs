@@ -1,4 +1,4 @@
-import { LoaderOptions } from '../types/loader-options.interface';
+import { BaseComponentOptions } from '../types/base-component-options.interface';
 
 export class LoadingComponent {
     private isLoading: boolean = false;
@@ -9,7 +9,7 @@ export class LoadingComponent {
     // DOM Elementss
     private $loader: any;
 
-    constructor(options: LoaderOptions) {
+    constructor(options: BaseComponentOptions) {
         this.$loader = options.element;
     }
 

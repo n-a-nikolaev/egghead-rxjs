@@ -1,10 +1,10 @@
-import { ListOptions } from '../types/list-options.interface';
 import { AppComponents } from '../app.components';
+import { BaseComponentOptions } from '../types/base-component-options.interface';
 
 export class ListUsersComponent {
     private $list: Element;
 
-    constructor(options: ListOptions) {
+    constructor(options: BaseComponentOptions) {
         this.$list = options.element;
     }
 
