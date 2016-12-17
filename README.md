@@ -14,7 +14,7 @@ Webpack + TypeScript Starter
 ## Create a new project
 
 ```bash
-git clone  https://github.com/n-a-nikolaev/webpack-ts-starter.git  my-proj
+git clone  https://github.com/n-a-nikolaev/egghead-rxjs.git  my-proj
 cd my-proj
 ```
 
