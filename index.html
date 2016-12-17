@@ -9,9 +9,39 @@
 
 <body>
     <!--LOADER-->
-    <div id="loader">
-        <div class="ui dimmer">
-            <div class="ui text loader">Loading</div>
+    <div id="gtu-loader" class="ui dimmer">
+        <div class="ui text loader">Loading</div>
+    </div>
+
+    <div class="ui container">
+        <!--Page Header-->
+        <div class="ui basic segment">
+            <div class="ui labeled icon menu">
+                <a href="https://github.com/n-a-nikolaev" class="item" target="_blank">
+                    <i class="github icon"></i> github
+                </a>
+                <a class="item" href="https://egghead.io/lessons/rxjs-reactive-programming-an-overview-of-reactive-concepts">
+                    <i class="external icon"></i>
+                    egghead
+                </a>
+            </div>
+        </div>
+
+        <!--Search Component-->
+        <div class="ui basic segment">
+            <div id="gtu-search-component">
+                <div class="ui fluid icon input">
+                    <input id="gtu-sc-input" class="search-input" type="text" placeholder="Search for github user...">
+                    <i class="search icon"></i>
+                </div>
+            </div>
+        </div>
+
+        <!--List Users-->
+        <div class="ui basic segment">
+            <div id="gtu-list-users-component">
+                List Users Here
+            </div>
         </div>
     </div>
 

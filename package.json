@@ -15,10 +15,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/n-a-nikolaev/webpack-ts-starter.git"
+    "url": "https://github.com/n-a-nikolaev/egghead-rxjs.git"
   },
   "bugs": {
-    "url": "https://github.com/n-a-nikolaev/webpack-ts-starter/issues"
+    "url": "https://github.com/n-a-nikolaev/egghead-rxjs/issues"
   },
   "license": "MIT",
   "dependencies": {

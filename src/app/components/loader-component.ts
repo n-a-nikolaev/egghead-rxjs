@@ -1,3 +1,5 @@
+import { LoaderOptions } from '../types/loader-options.interface';
+
 export class LoadingComponent {
     private isLoading: boolean = false;
 
@@ -7,17 +9,37 @@ export class LoadingComponent {
     // DOM Elementss
     private $loader: any;
 
-    constructor(private element: Element) {
-        this.$loader = element;
+    constructor(options: LoaderOptions) {
+        this.$loader = options.element;
     }
 
+    /**
+     * @description
+     * Toggle visibility of loading container
+     * 
+     * @memberOf LoadingComponent
+     */
     public toggle() {
         this.isLoading ? this.hide() : this.show();
     }
+
+    /**
+     * @description
+     * Show loading container by adding activeClass
+     * 
+     * @memberOf LoadingComponent
+     */
     public show() {
         this.$loader.classList = `${this.$loader.classList} ${this.activeClass}`;
         this.isLoading = true;
     }
+
+    /**
+     * @description
+     * Hide loading container by removing activeClass
+     * 
+     * @memberOf LoadingComponent
+     */
     public hide() {
         let classListArr: string[] = this.$loader.classList.toString().split(' ');
         classListArr.splice(classListArr.indexOf(this.activeClass), 1);

@@ -1,29 +1,17 @@
-import * as Rx from 'rxjs';
-import { User } from './types/user.interface';
-import { UserService } from './services/users.service';
-import { LoadingComponent } from './components/loader-component';
-
-// Cache DOM Elements
-let $loader = document.getElementsByClassName('dimmer')[0];
-
-
-
+import { AppServices } from './app.services';
+import { AppComponents } from './app.components';
 
 class App {
-    private loader: LoadingComponent;
-
-    constructor(loadingComponent: LoadingComponent) { 
-        this.loader = loadingComponent;
-    }
-
-    public init() {
+    constructor(
+        private Services: any,
+        private Components: any,
+    ) {
+        Components.list.init();
     }
 }
 
-// Initializa Components
-let loader = new LoadingComponent($loader);
-let app = new App(loader);
+new App(AppServices, AppComponents)
 
 
-// Init App
-app.init();
+
+
