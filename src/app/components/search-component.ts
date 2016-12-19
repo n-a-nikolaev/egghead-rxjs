@@ -8,6 +8,7 @@ import { BaseComponentOptions } from '../types/base-component-options.interface'
 import { User } from '../types/user.interface';
 
 export class SearchComponent {
+    private MIN_CHARS = 2;
     private inputClass: string = 'search-input';
 
     private $search: Element;
@@ -31,6 +32,9 @@ export class SearchComponent {
     public searchStream$(): Observable<User[]> {
         return Rx.Observable.fromEvent(this.$input, 'keyup')
             .debounceTime(500)
+            .filter((event: KeyboardEvent) => {
+                return (<HTMLInputElement>event.target).value.trim().length > this.MIN_CHARS;
+            })
             .map((event: KeyboardEvent) => {
                 AppComponents.loader.toggle();
                 return (<HTMLInputElement>event.target).value.trim()
