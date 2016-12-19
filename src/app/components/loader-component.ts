@@ -10,7 +10,7 @@ export class LoadingComponent {
     private $loader: any;
 
     constructor(options: BaseComponentOptions) {
-        this.$loader = options.element;
+        this.$loader = $(options.element);
     }
 
     /**
@@ -30,7 +30,7 @@ export class LoadingComponent {
      * @memberOf LoadingComponent
      */
     public show() {
-        this.$loader.classList = `${this.$loader.classList} ${this.activeClass}`;
+        this.$loader.addClass(this.activeClass);
         this.isLoading = true;
     }
 
@@ -41,9 +41,7 @@ export class LoadingComponent {
      * @memberOf LoadingComponent
      */
     public hide() {
-        let classListArr: string[] = this.$loader.classList.toString().split(' ');
-        classListArr.splice(classListArr.indexOf(this.activeClass), 1);
-        this.$loader.classList = classListArr.join(' ');
+        this.$loader.removeClass(this.activeClass);
         this.isLoading = false;
     }
 }

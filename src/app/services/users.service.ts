@@ -3,24 +3,6 @@ import { Observable } from 'rxjs/Observable';
 
 import { User } from '../types/user.interface';
 
-// const url: string = 'https://api.github.com/users';
-
-// let makePromise = (request: JQueryXHR): Promise<any> => {
-//     return Promise.resolve(request);
-// }
-
-// export const UserService = {
-//     getAll: (from: number = 0): Observable<User[]> => {
-//         let data = {
-//             since: from
-//         }
-//         return Rx.Observable.fromPromise(makePromise($.getJSON(url, data)));
-//     },
-//     getByUsername: (username: string): Observable<User[]> => {
-//         return Rx.Observable.fromPromise(this.makePromise($.getJSON(`url/${username}`)));
-//     }
-// }
-
 export class UserService {
     private url: string = 'https://api.github.com/users';
 

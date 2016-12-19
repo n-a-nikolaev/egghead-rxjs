@@ -10,11 +10,12 @@ module.exports = {
         filename: '[name].bundle.js'
     },
     resolve: {
-        extensions: ['', '.ts', '.js', '.json'],
+        extensions: ['', '.ts', '.js', '.json', '.handlebars'],
     },
     module: {
         loaders: [
-            { test: /\.ts(x?)$/, loader: 'ts-loader' }
+            { test: /\.ts(x?)$/, loader: 'ts-loader' },
+            { test: /\.handlebars$/, loader: "handlebars-loader" }
         ]
     },
     plugins: [
